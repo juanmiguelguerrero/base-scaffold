@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devstart": "DEBUG=base-scaffold nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -14,6 +15,9 @@
     "morgan": "~1.9.0",
     "nunjucks": "^3.0.1",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   },
   "description": "Estructura base para proyectos express + nunjucks",
   "main": "app.js",

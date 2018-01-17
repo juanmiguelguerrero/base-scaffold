@@ -1,0 +1,17 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<img src="http://ximg.es/600x400/{{ item.color }}/" alt="{{ item.nombre }}" class="img-fluid mt-sm-3 mb-sm-3">
+		</div>
+		<div class="col-md-6 mt-sm-3">
+			<h5>{{ item.nombre }}</h5>
+			<p>{{ item.descripcion }}</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
