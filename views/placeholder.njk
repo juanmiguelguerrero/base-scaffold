@@ -6,11 +6,12 @@
 	<div class="row">
 		{% for item in items %}
 		<div class="col-md-4 col-lg-3">
-			<a href="/item/{{ item.id }}">
-				<img src="http://ximg.es/600x400/{{ item.color }}/" alt="{{ item.nombre }}" class="img-fluid mt-sm-3">
+			<a href="{{ item.url }}" target="_blank">
+				<img src="{{ item.thumbnailUrl }}/" alt="{{ item.title }}" class="img-fluid mt-sm-3">
 			</a>
-			<h5>{{ item.nombre }}</h5>
-			<p>{{ item.descripcion }}</p>
+			<h5>Album ID: {{ item.albumId }}</h5>
+			<h6>ID: {{ item.id }}</h6>
+			<p>{{ item.title }}</p>
 		</div>
 		{% endfor %}
 	</div>
