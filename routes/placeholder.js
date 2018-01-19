@@ -14,7 +14,7 @@ var router = express.Router();
 
 const datos = require('../models/placeholder');
 router.get('/', (req, res, next) => {
-	 datos('https://jsonplaceholder.typicode.com/photos')
+	 datos('https://jsonplaceholder.typicode.com/albums/1/photos')
 	.then(data => {
 		const items = data.data;
 		// console.log(items)
