@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const items = require('../models/items');
+const items = require('../controlers/items');
 
 
 router.get('/', function(req, res, next) {

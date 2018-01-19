@@ -12,9 +12,10 @@ var router = express.Router();
 // 	.catch(next)
 // })
 
-const datos = require('../models/placeholder');
+const datos = require('../controlers/placeholder');
+
 router.get('/', (req, res, next) => {
-	 datos('https://jsonplaceholder.typicode.com/albums/1/photos')
+	 datos()
 	.then(data => {
 		const items = data.data;
 		// console.log(items)

@@ -41,6 +41,7 @@ app.use('/item/', require('./routes/item'));
 app.use('/users', require('./routes/users'));
 app.use('/download', require('./routes/download'));
 app.use('/placeholder', require('./routes/placeholder'));
+app.use('/lento', require('./routes/lento'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,8 +2,8 @@ const https = require('https');
 const axios = require('axios')
 
 
-function cargarAPI(url){
-	var data = axios.get(url)
+function cargarAPI(){
+	var data = axios.get('https://jsonplaceholder.typicode.com/albums/1/photos')
 	return data
 }
 
