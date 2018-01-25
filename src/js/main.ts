@@ -1,5 +1,10 @@
 import 'bootstrap';
-// import '../css/main.scss'
 
+import { ModVar1 } from './modulo1'
+import { ModVar2 } from './modulo2'
+import { Clase1 } from './clase1'
 
-console.log('Hola caracola1111...');
+let clase = new Clase1();
+console.log(clase.hola())
+
+const pp = 'hola';
