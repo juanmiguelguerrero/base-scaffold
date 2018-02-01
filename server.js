@@ -5,7 +5,6 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nunjucks = require('nunjucks');
-var fs = require('fs');
 
 var app = express();
 
@@ -19,28 +18,16 @@ nunjucks.configure('views', {
   express   : app
 });
 
-//Configuración de morgan para que guarde los logs de acceso
-// Para ver el archivo usar en terminal $> tail -f access.log
-var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'})
-app.use(morgan('combined',  {"stream": accessLogStream}));
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/', function (req, res) { res.redirect('/es'); });
-// app.get('/:language(es|en)/', require('./routes/index'))
 
 app.use('/', require('./routes/index'));
-app.use('/item/', require('./routes/item'));
-app.use('/users', require('./routes/users'));
-app.use('/download', require('./routes/download'));
-app.use('/placeholder', require('./routes/placeholder'));
-app.use('/lento', require('./routes/lento'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

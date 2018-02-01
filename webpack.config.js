@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 	entry: [
 		'./src/js/main.ts',
+		'bootstrap',
 		'./src/css/main.scss'
 	],
     output: {
@@ -31,6 +32,5 @@ module.exports = {
     },
 	plugins: [
 		new ExtractTextPlugin('./css/main.css')
-  	],
-	watch: true
+  	]
 };
